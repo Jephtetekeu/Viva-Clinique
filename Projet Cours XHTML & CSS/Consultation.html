@@ -1,88 +1,91 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Prenez rendez-vous à VIVA Clinique — remplissez le formulaire médical pour votre consultation à Douala.">
     <link rel="stylesheet" href="./css/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/shared.css">
     <link rel="stylesheet" href="css/consultation.css">
-    <title>Prenez Rendez-vous</title>
+    <title>Prenez Rendez-vous — VIVA Clinique</title>
 </head>
 <body>
 
     <div class="arrow">
-        <img src="./image/arrow-up-solid.svg" class="icone">
+        <img src="./image/arrow-up-solid.svg" class="icone" alt="">
     </div>
 
     <header>
-        <a href="./Page d'Accueil.html"><img class="logo" src="image/Viva Clinique.jpeg" width="80" height="80" alt="Logo"></a>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <!-- Navbar content -->
-        <div class="container">
-            <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="./Page d'Accueil.html">Accueil |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./nous.html">Découvrez notre équipe |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Pharmacie.html">Pharmacie |</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="./Consultation.html">Prenez rendez-vous</a>
-                    </li>
-                </ul>
+        <a href="./Page d'Accueil.html"><img class="logo" src="image/Viva Clinique.jpeg" width="80" height="80" alt="Logo VIVA Clinique"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Ouvrir le menu">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Page d'Accueil.html">Accueil |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./nous.html">Découvrez notre équipe |</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./Pharmacie.html">Pharmacie |</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="./Consultation.html">Prenez rendez-vous</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>        
-    </nav>
+        </nav>
     </header>
     <br>
-    <h2 id="titre">Formulaire de prise de Rendez-vous Médical</h2>
+
+    <h2 class="titre">Formulaire de prise de Rendez-vous Médical</h2>
     <br>
-    <p class="info-box">&nbsp;&nbsp;&nbsp;&nbsp;Afin d'avoir un suivi, remplissez svp le formulaire ci-dessous que vous presenterez 
-        a l'acceuil de la clinique (une copie physique) et ce a la date que vous aurez choisi.</p>
-    
-    <form id="medicalForm" method="post">
-        <fieldset><legend>Informations Personnelles</legend>
-        
-            <label for="nom">Nom:</label>
-            <input type="text"  required id="nom" class="form-control" name="nom" placeholder="">
-        
-            <label for="prenom">Prénom:</label>
-            <input type="text" id="prenom" name="prenom" placeholder="">
-        
-            <label for="dob">Date de naissance:</label>
-            <input type="date" id="dob" name="dob" required>
-        
-            <label for="sex">Sexe</label>
+    <p class="info-box">&nbsp;&nbsp;&nbsp;&nbsp;Afin d'avoir un suivi, remplissez svp le formulaire ci-dessous que vous présenterez
+        à l'accueil de la clinique (une copie physique) à la date que vous aurez choisie.</p>
+
+    <form id="medicalForm" method="post" action="#">
+        <fieldset>
+            <legend>Informations Personnelles</legend>
+
+            <label for="nom">Nom :</label>
+            <input type="text" required id="nom" class="form-control" name="nom" autocomplete="family-name" placeholder="">
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" autocomplete="given-name" placeholder="">
+
+            <label for="dob">Date de naissance :</label>
+            <input type="date" id="dob" name="dob" required autocomplete="bday">
+
+            <label for="sex">Sexe :</label>
             <select name="sexe" id="sex" required>
                 <option value="masculin">Homme</option>
                 <option value="feminin" selected>Femme</option>
             </select>
-        
-            <label for="villeNaissance">Ville de naissance:</label>
+
+            <label for="ville">Ville de naissance :</label>
             <select name="ville" id="ville">
-                <option value="ngaoundere">Ngaoundéré - Adamaoua</option>
-                <option value="yaounde">Yaoundé - Centre</option>
-                <option value="bertoua">Bertoua - Est</option>
-                <option value="maroua">Maroua - Extrême-Nord</option>
-                <option value="douala" selected>Douala - Littoral</option>
-                <option value="garoua">Garoua - Nord</option>
-                <option value="bamenda">Bamenda - Nord-Ouest</option>
-                <option value="bafoussam">Bafoussam - Ouest</option>
-                <option value="ebolowa">Ebolowa - Sud</option>
-                <option value="buea">Buea - Sud-Ouest</option>
+                <option value="ngaoundere">Ngaoundéré — Adamaoua</option>
+                <option value="yaounde">Yaoundé — Centre</option>
+                <option value="bertoua">Bertoua — Est</option>
+                <option value="maroua">Maroua — Extrême-Nord</option>
+                <option value="douala" selected>Douala — Littoral</option>
+                <option value="garoua">Garoua — Nord</option>
+                <option value="bamenda">Bamenda — Nord-Ouest</option>
+                <option value="bafoussam">Bafoussam — Ouest</option>
+                <option value="ebolowa">Ebolowa — Sud</option>
+                <option value="buea">Buea — Sud-Ouest</option>
             </select>
         </fieldset>
 
-        <fieldset><legend>Informations complementaires</legend>
-        
-            <label for="groupeSanguin">Groupe sanguin:</label>
+        <fieldset>
+            <legend>Informations complémentaires</legend>
+
+            <label for="groupeSanguin">Groupe sanguin :</label>
             <select id="groupeSanguin" name="groupeSanguin" required>
                 <option value="nothing">Je ne sais pas</option>
                 <option value="A+" selected>A+</option>
@@ -94,43 +97,42 @@
                 <option value="O+">O+</option>
                 <option value="O-">O-</option>
             </select>
-        
-            <label for="dateRDV">Date voulue de rendez-vous:</label>
+
+            <label for="dateRDV">Date voulue de rendez-vous :</label>
             <input type="date" id="dateRDV" name="dateRDV" required>
-        
-            <label for="medecin">Veuillez choisir votre medecin: </label>
-            <input type="text" required id="medecin" name="medecin" placeholder="Verifiez la zone de notre equipe pour choisir le medecin approprier ">
-        
-            <label for="antecedents">Antécédents familiaux (maladies):</label>
-            <textarea id="antecedents" name="antecedents" rows="4" placeholder="Mon frere etait SS, donc tout le temps malade"></textarea>
-        
-            <label for="observations">Observations supplémentaires:</label>
-            <textarea id="observations" name="observations" rows="4" placeholder="Autre chose a ajouter ? Dites nous tout"></textarea>
-        
-            <input type="button" value="Telecharger ce formulaire" id="telechargerBtn" class="download">
+
+            <label for="medecin">Veuillez choisir votre médecin :</label>
+            <input type="text" required id="medecin" name="medecin" placeholder="Consultez la page Notre Équipe pour choisir le médecin approprié">
+
+            <label for="antecedents">Antécédents familiaux (maladies) :</label>
+            <textarea id="antecedents" name="antecedents" rows="4" placeholder="Ex : diabète, hypertension, drépanocytose..."></textarea>
+
+            <label for="observations">Observations supplémentaires :</label>
+            <textarea id="observations" name="observations" rows="4" placeholder="Autre chose à ajouter ? Dites-nous tout."></textarea>
+
+            <input type="button" value="Télécharger ce formulaire" id="telechargerBtn" class="download">
             <input type="reset" value="Annuler" class="download">
         </fieldset>
     </form>
 
     <section id="localisation">
-        <h2 id="titre">localisation</h2>
-        <!-- Contenu localisation-->
-        <p>&nbsp;&nbsp;&nbsp;&nbsp; Ci-dessous la carte menant a la VIVA CLINIQUE.</p>
-
-       
+        <h2 class="titre">Localisation</h2>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp; Ci-dessous la carte menant à la VIVA CLINIQUE.</p>
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180963.38519520292!2d9.647031611060497!3d4.091331326551629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610c257517af81%3A0x6b6e16b5b4d74e50!2sInstitut%20Universitaire%20de%20la%20C%C3%B4te%20-%20IUC!5e0!3m2!1sfr!2scm!4v1701503869465!5m2!1sfr!2scm" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation VIVA Clinique"></iframe>
+        </div>
         <br><br>
     </section>
 
     <footer class="pharmacy-footer">
-        <!-- Footer content -->
         <div class="footer-content">
             <div class="footer-section contact-details">
                 <h5>Contact VIVA CLINIQUE</h5>
-                <p>Tel: <span>01 23 45 67 89</span></p>
-                <p>Email: <span>contact@vivaclinique.com</span></p>
-                <p>Heures d'Ouverture: <span>Lun-Dim 24h/24</span></p>
+                <p>Tel : <span>01 23 45 67 89</span></p>
+                <p>Email : <span>contact@vivaclinique.com</span></p>
+                <p>Heures d'Ouverture : <span>Lun-Dim 24h/24</span></p>
             </div>
-    
+
             <div class="footer-section quick-links">
                 <h5>Liens Rapides</h5>
                 <ul>
@@ -140,44 +142,42 @@
                     <li><a href="./Consultation.html">Prenez rendez-vous</a></li>
                 </ul>
             </div>
-    
+
             <div class="footer-section social-media">
                 <h5>Réseaux Sociaux</h5>
-                <a href="http://wwww.facebook.com" target="_blank"><img src="./image/facebook.svg" alt=""> <span>Facebook</span></a><br>
-                <a href="http://wwww.twitter.com" target="_blank"><img src="./image/x-twitter.svg" alt="X-Twitter"> <span>Twitter</span></a><br>
-                <a href="http://wwww.instagram.com" target="_blank"><img src="./image/instagram.svg" alt="Instagram"> <span>Instagram</span></a>
+                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"><img src="./image/facebook.svg" alt="Facebook"> <span>Facebook</span></a><br>
+                <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer"><img src="./image/x-twitter.svg" alt="X-Twitter"> <span>Twitter</span></a><br>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"><img src="./image/instagram.svg" alt="Instagram"> <span>Instagram</span></a>
             </div>
 
             <div class="footer-section legal">
                 <p>&copy; 2023 VIVA CLINIQUE Tous droits réservés.</p>
-                <div class="ma-map">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d180963.38519520292!2d9.647031611060497!3d4.091331326551629!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x10610c257517af81%3A0x6b6e16b5b4d74e50!2sInstitut%20Universitaire%20de%20la%20C%C3%B4te%20-%20IUC!5e0!3m2!1sfr!2scm!4v1701503869465!5m2!1sfr!2scm" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
             </div>
         </div>
     </footer>
 
-    <script src="./css/bootstrap/js/bootstrap.bundle.min.js">
-        document.getElementById('telechargerBtn').addEventListener('click', function() {
+    <script src="./css/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('telechargerBtn').addEventListener('click', function () {
             var contenu = '';
-            var formElements = document.getElementById('monFormulaire').elements;
-    
-            for (var i = 0; i < formElements.length ; i++) {
+            var formElements = document.getElementById('medicalForm').elements;
+
+            for (var i = 0; i < formElements.length; i++) {
                 var element = formElements[i];
-                if (element.type !== "button") { // Ignorer les boutons
+                if (element.type !== 'button' && element.type !== 'reset' && element.name) {
                     contenu += element.name + ': ' + element.value + '\r\n';
                 }
             }
-    
+
             var blob = new Blob([contenu], { type: 'text/plain' });
             var link = document.createElement('a');
-            link.download = 'formulaire.txt';
+            link.download = 'formulaire-rdv.txt';
             link.href = window.URL.createObjectURL(blob);
             link.click();
             window.URL.revokeObjectURL(link.href);
         });
     </script>
     <script src="./JS/Go-up-arrow"></script>
-    
+
 </body>
 </html>
