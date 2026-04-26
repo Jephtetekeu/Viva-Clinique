@@ -29,3 +29,8 @@ h3 {
     text-decoration: none;
     color: #fff;
 }
+
+.carousel-item img {
+    max-height: 420px;
+    object-fit: cover;
+}
